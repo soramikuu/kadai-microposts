@@ -24,7 +24,8 @@ class MicropostsController extends Controller
     }
     
     public function store(Request $request)
-    {
+    {   
+        $user = \Auth::user();
         $this->validate($request, [
             'content' => 'required|max:191'
         ]);

@@ -6,8 +6,9 @@
         {!! Form::close() !!}
     @else
         {!! Form::open(['route' => ['user.follow', $user->id],
-        'method' => 'delete']) !!}
+        'method' => 'store']) !!}
             {{ Form::submit('Follow',['class' => "btn btn-primary btn-block"]) }}
         {!! Form::close() !!}
     @endif
 @endif
+
